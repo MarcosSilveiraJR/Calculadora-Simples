@@ -94,6 +94,14 @@ public class CalculadoraTest {
         var resultado = calculadora.divisao(a, b);
         var resultadoEsperado = a / b;
         assertEquals(resultadoEsperado, resultado);
+    }
+
+
+    @Test
+    void baskaraTest() {
+
+        var resultado = calculadora.formulaBhaskara(-1,2,3);
+
         System.out.println(resultado);
     }
 }

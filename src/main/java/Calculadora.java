@@ -14,7 +14,7 @@ public class Calculadora {
     }
 
     public double soma(double a, double b) {
-        return  (a + b);
+        return (a + b);
     }
 
     public double subtracao(double a, double b) {
@@ -50,5 +50,16 @@ public class Calculadora {
 
     public void setB(double b) {
         this.b = b;
+    }
+
+    public double formulaBhaskara(double a, double b, double c) {
+        var delta = (b * b) + (-4 * a * c);
+        var deltaFinal = Math.sqrt(delta);
+        var dividendo = 2 * a;
+
+        var x1 = ((b * -1) + deltaFinal) / dividendo;
+        var x2 = ((b * -1) - deltaFinal) / dividendo;
+
+        return x1 + x2;
     }
 }
