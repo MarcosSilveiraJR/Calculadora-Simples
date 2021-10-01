@@ -4,7 +4,10 @@ import main.java.Calculadora;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class CalculadoraTest {
+    Calculadora calculadora = new Calculadora();
 
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
@@ -38,13 +41,30 @@ public class CalculadoraTest {
 
 
         System.out.println("A raiz quadrada de " + raiz + " é igual a " + valorEsperado);
-        Assertions.assertEquals(valorEsperado,resultado);
+        assertEquals(valorEsperado, resultado);
     }
 
     @Test
     void deveSomarCorretamente() {
 
-        Calculadora calculadora = new Calculadora();
+        var a = 10;
+        var b = 5;
+
+        var resultado = calculadora.soma(a, b);
+        var valorEsperado = a + b;
+        assertEquals(valorEsperado, resultado);
+        System.out.println("O valor esperado é " + resultado);
     }
 
+    @Test
+    void deveSubtrair() {
+        var a = 8;
+        var b = 3;
+
+        var resultado = calculadora.subtracao(a,  b);
+        var valorEsperado = a - b;
+        assertEquals(valorEsperado, resultado);
+        System.out.println(resultado);
+
+    }
 }
