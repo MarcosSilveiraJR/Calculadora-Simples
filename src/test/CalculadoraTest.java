@@ -61,10 +61,39 @@ public class CalculadoraTest {
         var a = 8;
         var b = 3;
 
-        var resultado = calculadora.subtracao(a,  b);
+        var resultado = calculadora.subtracao(a, b);
         var valorEsperado = a - b;
         assertEquals(valorEsperado, resultado);
         System.out.println(resultado);
 
+    }
+
+    @Test
+
+    void deveMultiplicar() {
+
+        var a = 2;
+        var b = 3;
+
+        var resultado = calculadora.multiplicacao(a, b);
+        var valorEsperado = 6;
+
+        assertEquals(valorEsperado, resultado);
+        System.out.println(resultado);
+
+
+    }
+
+    @Test
+
+    void DeveDividir () {
+
+        var a = 10;
+        var b = 5;
+
+        var resultado = calculadora.divisao(a, b);
+        var resultadoEsperado = a / b;
+        assertEquals(resultadoEsperado, resultado);
+        System.out.println(resultado);
     }
 }
