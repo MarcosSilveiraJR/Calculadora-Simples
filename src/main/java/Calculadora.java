@@ -2,11 +2,10 @@ package main.java;
 
 public class Calculadora {
 
-    private double a;
-    private double b;
+    private Double a;
+    private Double b;
 
-    public Calculadora() {
-    }
+    public Calculadora() { }
 
     public Calculadora(double a, double b) {
         this.a = a;
@@ -22,9 +21,7 @@ public class Calculadora {
     }
 
     public double multiplicacao(double a, double b) {
-
         return a * b;
-
     }
 
     public double divisao(double a, double b) {
@@ -62,4 +59,5 @@ public class Calculadora {
 
         return x1 + x2;
     }
+
 }
